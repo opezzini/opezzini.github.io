@@ -1,1 +1,93 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+
+  <body>
+    <!-- TOP CARD -->
+    <div class="container">
+      <div class="topcard">
+        <img src="./images/logo.svg" alt="" class="titleimg" />
+        <div class="scorecard">
+          <p id="score-title">SCORE</p>
+          <div id="score-display"></div>
+        </div>
+      </div>
+      <!-- GAME BOARD -->
+      <div class="game-board">
+        <div class="row-1">
+          <div class="option-container rock" id="rock">
+            <img class="option-img" src="./images/icon-rock.svg" />
+          </div>
+
+          <div class="option-container paper" id="paper">
+            <img class="option-img" src="./images/icon-paper.svg" />
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="option-container scissors" id="scissors">
+            <img class="option-img" src="./images/icon-scissors.svg" />
+          </div>
+        </div>
+      </div>
+      <!-- RESULT BOARD -->
+      <div class="results-board hidden">
+        <div class="radial">
+          <div class="you-picked">
+            <div class="selection-container" id="">
+              <img
+                class="option-img"
+                id="you-picked-img"
+                src="./images/icon-rock.svg"
+              />
+            </div>
+            <p>YOU PICKED</p>
+          </div>
+        </div>
+        <div class="they-picked">
+          <div class="selection-container" id="">
+            <img
+              class="option-img"
+              id="they-picked-img"
+              src="./images/icon-rock.svg"
+            />
+          </div>
+          <p>THE HOUSE PICKED</p>
+        </div>
+      </div>
+      <!-- PLAY AGAIN -->
+      <div class="playagain-container hidden invisible">
+        <h1 class="result-message">YOU LOSE</h1>
+        <button class="btn play-again">PLAY AGAIN</button>
+      </div>
+
+      <!-- RULES FOOTER -->
+      <div class="rules-container">
+        <button class="btn rules-btn">RULES</button>
+      </div>
+    </div>
+  </body>
+  <!-- RULES MODAL -->
+
+  <div class="modal hidden">
+    <div class="modal__contents">
+      <p class="rules-title">RULES</p>
+      <img src="./images/image-rules.svg" alt="" class="rules-img" />
+      <img src="./images/icon-close.svg" alt="" class="close-img" />
+    </div>
+  </div>
+  <script src="./gameplay.js"></script>
+</html>

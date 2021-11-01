@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+### Primary
+
+--Scissors-Gradient: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+--Paper-Gradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+--Rock-Gradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+--Lizard-Gradient: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+--Cyan: hsl(189, 59%, 53%), hsl(189, 58%, 57%);
+--Dark-Text: hsl(229, 25%, 31%);
+--Score-Text: hsl(229, 64%, 46%);
+--Header-Outline: hsl(217, 16%, 45%);
+--Radial-Gradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    border: 1px solid red;
+
+}
+
+html{
+    background: radial-gradient(var(--Radial-Gradient));
+      background-repeat:no-repeat;
+      background-size: cover;
+      min-height: 568px;
+      min-width: 360px;
+  
+}
+
+body{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color:white;
+        min-height: 568px;
+      min-width: 360px;
+
+}
+
+.game-board{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 300px;
+
+  max-width: 500px;
+  background-image: url('images/bg-triangle.svg');
+    background-position: center;
+  background-repeat: no-repeat;
+
+  background-size: 60%;
+}
+
+.row-1{
+  display:flex;
+  justify-content: space-around;
+}
+
+.row-2{
+  display:flex;
+    justify-content: space-around;
+
+}
+
+
+.option-container, .selection-container{
+  background-color:white;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  border: 12px solid rgb(91, 112, 237);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.option-img{
+  height: 50%;
+  width: 50%;
+}
+
+.rock {
+    border-color: rgb(91, 112, 237);
+    box-shadow: 0px 5px rgb(57, 84, 237);
+
+}
+
+.paper {
+    border-color: rgb(226, 169, 68);
+    box-shadow: 0px 5px rgb(222, 147, 17);
+
+}
+
+.scissors {
+    border-color: rgb(202, 63, 80);
+        box-shadow: 0px 5px rgb(145, 21, 36);
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    border: 1px solid red;
+    justify-content: space-between; 
+          min-height: 568px;
+      min-width: 360px;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+  border: 1px solid red;
+
+}
+
+.topcard{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    width:80% ;
+    height: 100px;
+    max-width: 800px;
+    border: 3px solid var(--Header-Outline);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.topcard img{
+  height: 100%;
+}
+
+.scorecard{
+  height: 70px;
+  width: 70px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+
+}
+
+.scorecard p {
+  font-size: 10px;
+  margin-bottom: 0px;
+  color: var(--Score-Text)
+}
+
+.scorecard div {
+  font-size: 30px;
+    color: var(--Dark-Text)
+
+}
+
+
+.results-board{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+ }
+
+.you-picked, .they-picked{
+  display:flex;
+flex-direction: column;
+align-items: center;
+}
+
+.selection-container {
+  margin-bottom: 15px;
+}
+
+.playagain-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invisible {
+  visibility:hidden;
+}
+
+.result-message{
+  font-size: 60px;
+  padding-bottom: 40px;
+}
+
+button {
+  padding: 10px 50px;
+  border-radius: 8px;
+  border: none;
+  color: rgb(28, 36, 69)
+}
+
+
+.rules-btn {
+  background-color: transparent;
+  color:white;
+  border: 2px solid white;
+
+}
+
+.modal{
+  position:absolute;
+  top:0;
+  height:100vh;
+  width:100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+            min-height: 568px;
+      min-width: 360px;
+}
+
+.modal__contents{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.hidden{
+  display: none;
+}
+
+.rules-title{
+  color:rgb(28, 36, 69);
+  font-size: 35px;
+}
+
+.close-img{
+  cursor:pointer;
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  border: 2px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.animate {
+  animation: MoveUpDown 0.5s linear infinite;
+  left: 0;
+  bottom: 0;
+    animation-iteration-count: 3;
+
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
